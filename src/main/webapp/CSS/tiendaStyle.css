@@ -1,10 +1,45 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* 
     Created on : 19-oct-2019, 20:04:22
     Author     : Francisco_Antonio
 */
 
+h1{
+    font-family: 'Indie Flower', cursive;
+    width: 60%;
+    margin-left: 27%;
+    padding-left: 10%;
+}
+#index{
+    font-family: 'Indie Flower', cursive;
+    width: 60%;
+    margin-left: 29%;
+    padding-left: 10%;
+}
+#contenido{
+  /*  width: 60%;
+    margin-left: 20%;
+    padding-left: 10%;*/
+   font-family: 'Indie Flower', cursive;
+   padding:2px;
+   cursor:pointer;
+   display:block;
+   width:290px;
+   margin: 0 auto;
+   text-align:center;
+}
+
+@font-face {
+    font-family: 'Indie Flower', cursive;
+    src: url(/FONT/IndieFlower-Regular.ttf);
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color:white;
+    background:blue;
+}
+.number{
+    width: 3em;
+}

@@ -1,16 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package es.albarregas.controllers;
 
+import es.albarregas.beans.Libro;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -18,69 +17,62 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class Tienda extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Tienda</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Tienda at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
-    }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+     request.getRequestDispatcher("HTML/error.html").forward(request, response);
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+
+        HttpSession sesion = request.getSession();
+        
+        if(request.getParameter("comprar")!=null){
+            System.out.println("fin");
+            sesion.removeAttribute("libros");
+            Cookie[] cookies = request.getCookies();
+            for(Cookie c:cookies){
+                if(c.getName().equals("libros")){
+                    c.setMaxAge(0);
+                    response.addCookie(c);
+                }
+            }
+            request.getRequestDispatcher("index.jsp").forward(request, response);
+        }else{
+        ArrayList<Libro> libros = (ArrayList<Libro>) sesion.getAttribute("libros");
+        if (libros == null) {
+            String[] valores = null;
+            Cookie[] cookies = request.getCookies();
+            for (Cookie c : cookies) {
+                if (c.getName().equals("libros")) {
+                    valores = c.getValue().split(",");
+                }
+            }
+            ArrayList<Libro> aux = new ArrayList<>();
+            if (valores != null) {
+                for (int i = 1; i < valores.length; i+=2) {
+                    aux.add(new Libro(valores[i].replace("_", " "), Integer.parseInt(valores[i - 1])));
+                }
+            }
+            libros=aux;
+        }
+        String compra = "";
+        if (libros.isEmpty()) {
+            compra = "¿Seguro que no quieres comprar ningún libro?";
+        } else {
+            for (Libro l : libros) {
+                compra += "<p>Título: " + l.getTitulo() + " - Cantidad: " + l.getCantidad() + "</p>";
+            }
+        }
+        request.setAttribute("compra", compra);
+        request.getRequestDispatcher("/JSP/carrito.jsp").forward(request, response);
+        }
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
+
 
 }
+
