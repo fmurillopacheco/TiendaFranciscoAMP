@@ -1,7 +1,7 @@
 # TiendaFranciscoAMP
 Proyecto que emula el carrito de compra de una tienda de libros utilizando el patrón de diseño Modelo-Vista Controlador.
 
-[The old town Bookshop](https://live.staticflickr.com/7262/7048256155_0254816a4d_h.jpg)
+[](https://live.staticflickr.com/7262/7048256155_0254816a4d_h.jpg)
 
 Se actualiza la página inicial, fijando una imagen en el inicio y al hacer click en el título se accede a la página de la tienda.
 
