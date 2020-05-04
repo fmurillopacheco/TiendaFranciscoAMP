@@ -5,6 +5,7 @@ import es.albarregas.beans.Libro;
 import java.io.IOException;
 import java.util.ArrayList;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,19 +16,18 @@ import javax.servlet.http.HttpSession;
  *
  * @author Francisco_Antonio
  */
-public class Tienda extends HttpServlet {
-
+@WebServlet(name = "Carrito", urlPatterns = {"/Carrito"})
+public class Carrito extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-     request.getRequestDispatcher("HTML/error.html").forward(request, response);
+        request.getRequestDispatcher("HTML/errorAcceso.html").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
         HttpSession sesion = request.getSession();
         
         if(request.getParameter("comprar")!=null){
@@ -72,7 +72,4 @@ public class Tienda extends HttpServlet {
         }
     }
 
-
-
 }
-

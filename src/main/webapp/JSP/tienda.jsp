@@ -5,12 +5,13 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Tienda</title>
-
         <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/CSS/tiendaStyle.css"/>
     </head>
     <body>
@@ -18,7 +19,7 @@
         <div id="contenido">
             
             <h3>${mensaje}</h3>
-            <form action="${pageContext.request.contextPath}/comprar" method="post">
+            <form action="${pageContext.request.contextPath}/Compra" method="post">
 
                 <legend>Selecciona un libro:</legend>
                 <select name="titulo" size="5">
@@ -38,7 +39,7 @@
                     <input type="reset" name="reset" value="Limpiar"/>
                 </p>
             </form>
-            <form action="${pageContext.request.contextPath}/tienda" method="post">
+            <form action="${pageContext.request.contextPath}/Carrito" method="post">
                 <input type="submit" name="carrito" value="Ir a carrito"/>
             </form>
         </div>

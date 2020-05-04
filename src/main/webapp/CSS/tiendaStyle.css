@@ -1,5 +1,4 @@
 /* 
-    Created on : 19-oct-2019, 20:04:22
     Author     : Francisco_Antonio
 */
 
@@ -16,14 +15,12 @@ h1{
     padding-left: 10%;
 }
 #contenido{
-  /*  width: 60%;
+    width: 60%;
     margin-left: 20%;
-    padding-left: 10%;*/
-   font-family: 'Indie Flower', cursive;
-   padding:2px;
-   cursor:pointer;
-   display:block;
-   width:290px;
+    padding-left: 10%;
+    font-family: 'Indie Flower', cursive;
+    padding:2px;
+    display:block;
    margin: 0 auto;
    text-align:center;
 }
@@ -35,10 +32,6 @@ h1{
 a{
     text-decoration: none;
     color: black;
-}
-a:hover{
-    color:white;
-    background:blue;
 }
 .number{
     width: 3em;

@@ -2,11 +2,11 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>Comprar</servlet-name>
-        <servlet-class>es.albarregas.controllers.Comprar</servlet-class>
+        <servlet-class>es.albarregas.controllers.Comprar_old</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>Tienda</servlet-name>
-        <servlet-class>es.albarregas.controllers.Tienda</servlet-class>
+        <servlet-class>es.albarregas.controllers.Tienda_old</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Comprar</servlet-name>

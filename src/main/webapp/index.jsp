@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@include file="INC/metas.inc" %>
 
 <!DOCTYPE html>
 <html>
@@ -16,11 +17,11 @@
         
     </head>
     <body>
-        <h1 id="index">La Chabola del libro</h1>
+        <a href="JSP/tienda.jsp"><h1 id="index">The old town Bookshop</h1></a>
         <div id="contenido">
-            <a href="${pageContext.request.contextPath}/JSP/tienda.jsp">
-                <img src="${pageContext.request.contextPath}/IMG/logo_tienda.png" alt="tienda online"/>
-            </a>
+            <a href="${pageContext.request.contextPath}/JSP/tienda.jsp"></a>
+            <img src="https://live.staticflickr.com/7262/7048256155_0254816a4d_h.jpg" width="640" height="526">
+            <p>Old & news books, maps & prints.</p>
         </div>
     </body>
 </html>

@@ -1,10 +1,11 @@
 <%-- 
     Document   : compra
-    Created on : 20-oct-2019, 23:00:12
     Author     : Francisco_Antonio
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+
 <!DOCTYPE html>
 <html>
     <head>
