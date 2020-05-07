@@ -14,3 +14,16 @@ Se modifica la página de error para que muestre un error cuando cuando se acced
 se incluyen archivo metas con los datos SEO de la aplicación.
 
 ### by Francisco Antonio Murillo Pacheco
+
+## Tarea Página de Registro.
+
+Se actualiza diseño de todas las páginas.
+
+Se modifican index.jsp, carrito.jsp, compra.jsp, tienda.jsp y el archivo css tiendaStyle.css. Además se crea artchivo indexTiendaStyle.css que contiene la configuración de las páginas jsp tienda, carrito y compra.
+
+Se añade dos fotos en la carpeta IMG: logo_tienda.png y fondoTienda.png 
+
+No logro que una vez que finalizada la compra se no elimine la sesión, ni logro que me almacene bien los libros en la cookie.
+
+07-05-2020
+by Francisco Antonio Murillo Pacheco
