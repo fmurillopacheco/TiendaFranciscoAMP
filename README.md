@@ -27,3 +27,15 @@ No logro que una vez que finalizada la compra se no elimine la sesión, ni logro
 
 07-05-2020
 by Francisco Antonio Murillo Pacheco
+
+## Tarea Página de Registro.
+
+Se actualiza diseño de todas las páginas.
+
+Se quitan fotos de fondo ante la imposibilidad de poder subir el proyecto por el tamaño.
+
+
+Se modifican index.jsp, carrito.jsp, compra.jsp, tienda.jsp y el archivo css tiendaStyle.css e indexTiendaStyle.css. Además se elimna la carpeta IMG donde estaban las fotos. compra.
+
+07-05-2020
+by Francisco Antonio Murillo Pacheco
