@@ -13,15 +13,14 @@
         <title>Tienda de libros online.</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/CSS/tiendaStyle.css"/>
+        <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/CSS/indexTiendaStyle.css"/>
         
     </head>
     <body>
         <a href="JSP/tienda.jsp"><h1 id="index">The old town Bookshop</h1></a>
         <div id="contenido">
             <a href="${pageContext.request.contextPath}/JSP/tienda.jsp"></a>
-            <img src="https://live.staticflickr.com/7262/7048256155_0254816a4d_h.jpg" width="640" height="526">
-            <p>Old & news books, maps & prints.</p>
+         <!--   <img src="https://live.staticflickr.com/7262/7048256155_0254816a4d_h.jpg" width="640" height="526"> -->
         </div>
     </body>
 </html>

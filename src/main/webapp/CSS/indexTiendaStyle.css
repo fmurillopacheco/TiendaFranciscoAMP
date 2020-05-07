@@ -1,0 +1,29 @@
+
+/* 
+    Created on : 07-may-2020, 1:31:14
+    Author     : Framcisco_Antonio
+*/
+body {
+  background-image: url("../IMG/logo_tienda.png") ;
+}
+
+#index{
+    font-family: 'Indie Flower', cursive;
+    width: 60%;
+    margin-left: 29%;
+    padding-left: 10%;
+       color:white;
+}
+
+#contenido{
+    margin-top: 50px;
+    width: 60%;
+    margin-left: 20%;
+    padding-left: 10%;
+    font-family: 'Indie Flower', cursive;
+    padding:2px;
+    display:block;
+   margin: 0 auto;
+   color:white;
+   text-align:center;
+}
